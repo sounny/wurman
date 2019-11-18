@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta
             name="viewport"
             content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -9,6 +9,21 @@
 
     <title>Wurman dots</title>
 
+    <!--    How to make this site-->
+    <!--    https://www.esri.com/arcgis-blog/products/js-api-arcgis/mapping/wurman-dots-bringing-back-the-60s/-->
+
+</head>
+
+<head>
+
+<!--External stylesheets and JS Libraries-->
+    <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.13/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.13/"></script>
+
+<!--  internal  Style Sheet-->
     <style>
         html,
         body,
@@ -18,10 +33,12 @@
             height: 100%;
             width: 100%;
         }
+
         .description {
             background-color: white;
             padding: 10px;
         }
+
         .title {
             background-color: inherit;
             text-align: center;
@@ -29,29 +46,27 @@
             padding: 5px 10px 10px 10px;
             color: #363636;
         }
+
         .high-population {
             color: #c9770c;
             font-weight: 900;
         }
+
         .low-population {
             color: #4b6147;
             font-weight: 900;
         }
     </style>
 
-    <link
-            rel="stylesheet"
-            href="https://js.arcgis.com/4.13/esri/themes/light/main.css"
-    />
-    <script src="https://js.arcgis.com/4.13/"></script>
 
+<!--Internal Scripts-->
     <script>
         require([
             "esri/Map",
             "esri/views/MapView",
             "esri/layers/FeatureLayer",
             "esri/widgets/Expand"
-        ], function(Map, MapView, FeatureLayer, Expand) {
+        ], function (Map, MapView, FeatureLayer, Expand) {
             const map = new Map({
                 basemap: {
                     portalItem: {
@@ -89,10 +104,10 @@
                                     {
                                         type: "CIMVectorMarker",
                                         enable: true,
-                                        anchorPoint: { x: 0, y: 0 },
+                                        anchorPoint: {x: 0, y: 0},
                                         anchorPointUnits: "Relative",
                                         primitiveName: "innerSizeOverride",
-                                        frame: { xmin: 0.0, ymin: 0.0, xmax: 17.0, ymax: 17.0 },
+                                        frame: {xmin: 0.0, ymin: 0.0, xmax: 17.0, ymax: 17.0},
                                         markerGraphics: [
                                             {
                                                 type: "CIMMarkerGraphic",
@@ -157,10 +172,10 @@
                                     {
                                         type: "CIMVectorMarker",
                                         enable: true,
-                                        anchorPoint: { x: 0, y: 0 },
+                                        anchorPoint: {x: 0, y: 0},
                                         anchorPointUnits: "Relative",
                                         primitiveName: "outerSizeOverride",
-                                        frame: { xmin: 0.0, ymin: 0.0, xmax: 17.0, ymax: 17.0 },
+                                        frame: {xmin: 0.0, ymin: 0.0, xmax: 17.0, ymax: 17.0},
                                         markerGraphics: [
                                             {
                                                 type: "CIMMarkerGraphic",
